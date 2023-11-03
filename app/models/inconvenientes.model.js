@@ -21,7 +21,7 @@ const Inconvenientes = {};
 
 Inconvenientes.mostrarTodos = (callback) => {
   conexion.query(
-    "select * from inconvenientes_certificados",
+    "select * from inconvenientes_certificados where estado = 1 order by id desc",
     function (err, results, fields) {
       if (err) {
         console.error("Error al recuperar los inconvenientes:", err);

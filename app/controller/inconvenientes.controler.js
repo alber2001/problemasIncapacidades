@@ -25,7 +25,7 @@ InconvenientesController.mostrarTodos = (req, res) => {
       console.error("Error al recuperar los inconvenientes:", err);
       res.status(500).json({ error: "Error al recuperar los inconvenientes" });
     } else {
-      res.status(200).json({ inconvenientes: results });
+      res.status(200).json(results);
     }
   });
 };
